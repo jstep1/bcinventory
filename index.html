@@ -10,26 +10,34 @@
 </head>
 <body>
         <div>
-                <h1 class="display-4">Bluechew Inventory</h1>
-                <br>
-                <form action="/" style="text-align: center">
+            <br><br>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                    <h1 class="display-4">Bluechew Inventory</h1>
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                    <form action="/">
                     Date:
                     <input type="date" name="today">
-                </form>
-        </div>
+                    </form>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+                        <form action="/">
+                            Scan a pouch:
+                            <input type="text" name="input" class="scan">
+                        </form>
+                        <br>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Add Inventory Manually
+                        </button>
+                    </div>
         <br>
 
-        <div class="text-center">
-        <form action="/">
-            Scan a pouch:
-            <input type="text" name="input" class="scan">
-        </form>
 
-        <br>
-
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Add Inventory Manually
-              </button>
               
               <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
