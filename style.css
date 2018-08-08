@@ -1,0 +1,27 @@
+h1 {
+    text-align: center
+}
+
+h2 {
+    font-size: 72px;
+    text-align: center;
+    
+}
+
+.sil {
+    background-color: black;
+    color: white
+}
+
+.tad {
+    background-color: lightgray;
+}
+
+.invnum {
+    font: bold;
+    font-size: 144px
+}
+
+.inv {
+    width: 35px
+}

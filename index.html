@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bluechew Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+        <div>
+                <h1 class="display-4">Bluechew Inventory</h1>
+                <br>
+                <form action="/" style="text-align: center">
+                    Date:
+                    <input type="date" name="today">
+                </form>
+        </div>
+        <br>
+
+        <div class="text-center">
+        <form action="/">
+            Scan a pouch:
+            <input type="text" name="input">
+        </form>
+
+        <br>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Add Inventory Manually
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Add inventory</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="/">
+                                <div class="row">
+                                        <div class="col-sm-4">SIL 5: <input type="text" name="input" class="inv sil5up"><button type="button" class="btn inv s5up">&#10004;</button>
+                                        </div>
+                                        <div class="col-sm-4">SIL 8: <input type="text" name="input" class="inv sil8up"><button type="button" class="btn inv s8up">&#10004;</button></div>
+                                        <div class="col-sm-4">SIL 14: <input type="text" name="input" class="inv sil14up"><button type="button" class="btn inv s14up">&#10004;</button></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-sm-4">TAD 03: <input type="text" name="input" class="inv tad3up"><button type="button" class="btn inv t3up">&#10004;</button></div>
+                                        <div class="col-sm-4">TAD 05: <input type="text" name="input" class="inv tad5up"><button type="button" class="btn inv t5up">&#10004;</button></div>
+                                        <div class="col-sm-4">TAD 08: <input type="text" name="input" class="inv tad8up"><button type="button" class="btn inv t8up">&#10004;</button></div>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+        <br>
+
+            <div class="row sil border border-dark">
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 5</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil5add">+</button>
+                        <button type="button" class="btn btn-danger sil5sub">-</button></div>
+                    <p class="invnum text-center"><span class="sil5">0</span></p>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 8</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil8add">+</button>
+                        <button type="button" class="btn btn-danger sil8sub">-</button></div>
+                    <p class="invnum text-center"><span class="sil8">0</span></p>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 14</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
+                        <button type="button" class="btn btn-danger sil14sub">-</button></div>
+                    <p class="invnum text-center"><span class="sil14">0</span></p>
+                  </div>
+            </div>
+        
+       
+            <div class="row tad border border-dark">
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 03</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary tad3add">+</button>
+                        <button type="button" class="btn btn-danger tad3sub">-</button></div>
+                    <p class="invnum text-center"><span class="tad3">0</span></p>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 05</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary tad5add">+</button>
+                        <button type="button" class="btn btn-danger tad5sub">-</button></div>
+                    <p class="invnum text-center"><span class="tad5">0</span></p>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 08</h2>
+                    <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
+                        <button type="button" class="btn btn-danger tad8sub">-</button></div>
+                    <p class="invnum text-center"><span class="tad8">0</span></p>
+                  </div>
+            </div>
+        
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
