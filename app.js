@@ -126,3 +126,10 @@ $(".t8up").click(function() {
     $(".tad8").text(x);
     localStorage.setItem("tad8", x);
 })
+
+///////
+
+$(".scan").change(function() {
+    alert($(this).val());
+    $(".scan").val("");
+})
