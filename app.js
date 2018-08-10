@@ -130,6 +130,30 @@ $(".t8up").click(function() {
 ///////
 
 $(".scan").change(function() {
-    alert($(this).val());
-    $(".scan").val("");
+    var s5 = parseInt(localStorage.getItem("sil5"));
+    var s8 = parseInt(localStorage.getItem("sil8"));
+    var s14 = parseInt(localStorage.getItem("sil14"));
+    var t3 = parseInt(localStorage.getItem("tad3"));
+    var t5 = parseInt(localStorage.getItem("tad5"));
+    var t8 = parseInt(localStorage.getItem("tad8"));
+    var x = $(".scan").val();
+    
+    if (x === "SIL_5") {
+        localStorage.setItem("sil5", s5 + 1)
+    }
+    if (x === "SIL_8") {
+        localStorage.setItem("sil8", s8 + 1)
+    }
+    if (x === "SIL_14") {
+        localStorage.setItem("sil14", s14 + 1)
+    }
+    if (x === "TAD_03") {
+        localStorage.setItem("tad3", t3 + 1)
+    }
+    if (x === "TAD_05") {
+        localStorage.setItem("tad5", t5 + 1)
+    }
+    if (x === "TAD_08") {
+        localStorage.setItem("tad8", t8 + 1)
+    }
 })
