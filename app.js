@@ -157,3 +157,31 @@ $(".scan").change(function() {
         localStorage.setItem("tad8", t8 + 1)
     }
 })
+
+///
+
+var a;
+
+$(".sku").click(function() {
+    $("#sel").text(this.text);
+    a = $("#sel").text()
+    console.log(a)
+    $("#option").text(localStorage.getItem(a))
+})
+    
+$("#reminv").click(function() {
+    var y = $("#rem").val();
+    var z = $("#option").text();
+    console.log(y, z)
+    if(y !== "" && z !== "") {
+    var b = localStorage.getItem(a) - parseInt($("#rem").val());
+    $("." + a).text(b);
+    localStorage.setItem(a, b)
+    }
+    else {
+        alert("Please enter a valid number.")
+    }
+    
+})
+    
+   
