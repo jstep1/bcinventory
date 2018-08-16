@@ -4,6 +4,10 @@ h2 {
     
 }
 
+h4 {
+    text-align: center;
+}
+
 .sil {
     background-color: black;
     color: white
@@ -20,4 +24,9 @@ h2 {
 
 .inv {
     width: 35px
+}
+
+.td {
+    width: 100px;
+    text-align: center
 }
