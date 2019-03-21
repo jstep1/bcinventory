@@ -11,23 +11,17 @@
 <body>
         <div>
             <br><br>
-                <div class="row text-center">
+            <div class="container">
+                <div class="row text-center container">
                     <div class="col-sm-4">
-                    <h1 class="display-4">Bluechew Inventory</h1>
-                    </div>
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                    <form action="/">
-                    Date:
-                    <input type="date" name="today">
-                    </form>
+                    <h2>Bluechew Inventory</h2>
                     </div>
 
-                </div>
+                <div class="col-sm-4"></div>
 
-                <div class="text-center">
+                <div class="col-sm-4">
                         <form action="index.html" method="get">
-                            Scan a pouch:
+                            Scan a bin:
                             <input type="text" name="input" class="scan" autofocus>
                         </form>
                         <br>
@@ -35,6 +29,8 @@
                                 Add Inventory Manually
                         </button>
                     </div>
+                </div>
+                </div>
         <br>
 
 
@@ -75,25 +71,85 @@
         </div>
 
         <br>
-
+            <div class="container">
             <div class="row sil border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>SIL 5</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary sil5add">+</button>
-                        <button type="button" class="btn btn-danger sil5sub">-</button></div>
-                    <p class="invnum text-center"><span class="sil5">0</span></p>
+                    <div class="row">
+                    <div class="col-sm">
+                    <p>S5A: <span class="S5A"></span><button type="button" class="cb btn-success sil5complete" id="S5A">&#10004;</button></p>
+                    <p>S5B: <span class="S5B"></span></p>
+                    <p>S5C: <span class="S5C"></span></p>
+                    <p>S5D: <span class="S5D"></span></p>
+                    <p>S5E: <span class="S5E"></span></p>
+                    <p>S5F: <span class="S5F"></span></p>
+                    <p>S5G: <span class="S5G"></span></p>
+                    </div>
+                    <div class="col-sm">
+                    <p>S5H: <span class="S5H"></span></p>
+                    <p>S5I: <span class="S5I"></span></p>
+                    <p>S5J: <span class="S5J"></span></p>
+                    <p>S5K: <span class="S5K"></span></p>
+                    <p>S5L: <span class="S5L"></span></p>
+                    <p>S5M: <span class="S5M"></span></p>
+                    <p>S5N: <span class="S5N"></span></p>
+                    </div>
+                    </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil5add">+</button> -->
+                        <!-- <button type="button" class="btn btn-danger sil5sub">-</button></div> -->
+                    <h2>TOTAL: <span class="sil5">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 8</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary sil8add">+</button>
-                        <button type="button" class="btn btn-danger sil8sub">-</button></div>
-                    <p class="invnum text-center"><span class="sil8">0</span></p>
+                    <div class="row">
+                        <div class="col-sm">
+                        <p>S8A: <span class="S8A"></span></p>
+                        <p>S8B: <span class="S8B"></span></p>
+                        <p>S8C: <span class="S8C"></span></p>
+                        <p>S8D: <span class="S8D"></span></p>
+                        <p>S8E: <span class="S8E"></span></p>
+                        <p>S8F: <span class="S8F"></span></p>
+                        <p>S8G: <span class="S8G"></span></p>
+                        </div>
+                        <div class="col-sm">
+                        <p>S8H: <span class="S8H"></span></p>
+                        <p>S8I: <span class="S8I"></span></p>
+                        <p>S8J: <span class="S8J"></span></p>
+                        <p>S8K: <span class="S8K"></span></p>
+                        <p>S8L: <span class="S8L"></span></p>
+                        <p>S8M: <span class="S8M"></span></p>
+                        <p>S8N: <span class="S8N"></span></p>
+                        </div>
+                        </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil8add">+</button>
+                        <button type="button" class="btn btn-danger sil8sub">-</button></div> -->
+                    <h2>TOTAL: <span class="sil8">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 14</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
-                        <button type="button" class="btn btn-danger sil14sub">-</button></div>
-                    <p class="invnum text-center"><span class="sil14">0</span></p>
+                    <div class="row">
+                        <div class="col-sm">
+                        <p>S14A: <span class="S14A"></span></p>
+                        <p>S14B: <span class="S14B"></span></p>
+                        <p>S14C: <span class="S14C"></span></p>
+                        <p>S14D: <span class="S14D"></span></p>
+                        <p>S14E: <span class="S14E"></span></p>
+                        <p>S14F: <span class="S14F"></span></p>
+                        <p>S14G: <span class="S14G"></span></p>
+                        </div>
+                        <div class="col-sm">
+                        <p>S14H: <span class="S14H"></span></p>
+                        <p>S14I: <span class="S14I"></span></p>
+                        <p>S14J: <span class="S14J"></span></p>
+                        <p>S14K: <span class="S14K"></span></p>
+                        <p>S14L: <span class="S14L"></span></p>
+                        <p>S14M: <span class="S14M"></span></p>
+                        <p>S14N: <span class="S14N"></span></p>
+                        </div>
+                        </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
+                        <button type="button" class="btn btn-danger sil14sub">-</button></div> -->
+                    <h2>TOTAL: <span class="sil14">0</span></h2>
                   </div>
             </div>
         
@@ -101,23 +157,84 @@
             <div class="row tad border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>TAD 03</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary tad3add">+</button>
-                        <button type="button" class="btn btn-danger tad3sub">-</button></div>
-                    <p class="invnum text-center"><span class="tad3">0</span></p>
+                    <div class="row">
+                        <div class="col-sm">
+                        <p>T03A: <span class="T03A"></span></p>
+                        <p>T03B: <span class="T03B"></span></p>
+                        <p>T03C: <span class="T03C"></span></p>
+                        <p>T03D: <span class="T03D"></span></p>
+                        <p>T03E: <span class="T03E"></span></p>
+                        <p>T03F: <span class="T03F"></span></p>
+                        <p>T03G: <span class="T03G"></span></p>
+                        </div>
+                        <div class="col-sm">
+                        <p>T03H: <span class="T03H"></span></p>
+                        <p>T03I: <span class="T03I"></span></p>
+                        <p>T03J: <span class="T03J"></span></p>
+                        <p>T03K: <span class="T03K"></span></p>
+                        <p>T03L: <span class="T03L"></span></p>
+                        <p>T03M: <span class="T03M"></span></p>
+                        <p>T03N: <span class="T03N"></span></p>
+                        </div>
+                        </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad3add">+</button>
+                        <button type="button" class="btn btn-danger tad3sub">-</button></div> -->
+                    <h2>TOTAL: <span class="tad3">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>TAD 05</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary tad5add">+</button>
-                        <button type="button" class="btn btn-danger tad5sub">-</button></div>
-                    <p class="invnum text-center"><span class="tad5">0</span></p>
+                    <div class="row">
+                        <div class="col-sm">
+                        <p>T05A: <span class="T05A"></span></p>
+                        <p>T05B: <span class="T05B"></span></p>
+                        <p>T05C: <span class="T05C"></span></p>
+                        <p>T05D: <span class="T05D"></span></p>
+                        <p>T05E: <span class="T05E"></span></p>
+                        <p>T05F: <span class="T05F"></span></p>
+                        <p>T05G: <span class="T05G"></span></p>
+                        </div>
+                        <div class="col-sm">
+                        <p>T05H: <span class="T05H"></span></p>
+                        <p>T05I: <span class="T05I"></span></p>
+                        <p>T05J: <span class="T05J"></span></p>
+                        <p>T05K: <span class="T05K"></span></p>
+                        <p>T05L: <span class="T05L"></span></p>
+                        <p>T05M: <span class="T05M"></span></p>
+                        <p>T05N: <span class="T05N"></span></p>
+                        </div>
+                        </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad5add">+</button>
+                        <button type="button" class="btn btn-danger tad5sub">-</button></div> -->
+                    <h2>TOTAL: <span class="tad5">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
-                    <h2>TAD 08</h2>
-                    <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
-                        <button type="button" class="btn btn-danger tad8sub">-</button></div>
-                    <p class="invnum text-center"><span class="tad8">0</span></p>
+                    <h2>TAD 09</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                        <p>T09A: <span class="T09A"></span></p>
+                        <p>T09B: <span class="T09B"></span></p>
+                        <p>T09C: <span class="T09C"></span></p>
+                        <p>T09D: <span class="T09D"></span></p>
+                        <p>T09E: <span class="T09E"></span></p>
+                        <p>T09F: <span class="T09F"></span></p>
+                        <p>T09G: <span class="T09G"></span></p>
+                        </div>
+                        <div class="col-sm">
+                        <p>T09H: <span class="T09H"></span></p>
+                        <p>T09I: <span class="T09I"></span></p>
+                        <p>T09J: <span class="T09J"></span></p>
+                        <p>T09K: <span class="T09K"></span></p>
+                        <p>T09L: <span class="T09L"></span></p>
+                        <p>T09M: <span class="T09M"></span></p>
+                        <p>T09N: <span class="T09N"></span></p>
+                        </div>
+                        </div>
+                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
+                        <button type="button" class="btn btn-danger tad8sub">-</button></div> -->
+                    <h2>TOTAL: <span class="tad9">0</span></h2>
                   </div>
             </div>
+        </div>
         
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
