@@ -25,9 +25,12 @@
                             <input type="text" name="input" class="scan" autofocus>
                         </form>
                         <br>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                Add Inventory Manually
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addinv">
+                            Add Inventory Manually
                         </button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#subinv">
+                            Remove Used Inventory
+                    </button>
                     </div>
                 </div>
                 </div>
@@ -35,8 +38,8 @@
 
 
               
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <!-- Modals -->
+              <div class="modal fade" id="addinv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -68,6 +71,44 @@
                 </div>
               </div>
 
+              <div class="modal fade" id="subinv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Remove inventory</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="dropdown text-center">
+                            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select an item
+                            </button>
+                            <div class="text-center">
+                            <br>
+                                <h3><b><span id="sel"></b></div></h3>
+                            <br>
+                            <h4><span id="option"></span> - <input type="text" name="input" class="inv" id="rem">
+                                <br><br>
+                            <button type="button" class="btn inv" id="reminv">&#10004;</button></h4>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item sku" id="sil5" href="#">sil5</span></a>
+                              <a class="dropdown-item sku" id="sil8" href="#">sil8</span></a>
+                              <a class="dropdown-item sku" id="sil14" href="#">sil14</span></a>
+                              <a class="dropdown-item sku" id="tad3" href="#">tad3</a>
+                              <a class="dropdown-item sku" id="tad5" href="#">tad5</a>
+                              <a class="dropdown-item sku" id="tad8" href="#">tad8</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+     <!-- End Modals -->
         </div>
 
         <br>
@@ -75,6 +116,7 @@
             <div class="row sil border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>SIL 5</h2>
+<<<<<<< HEAD
                     <div class="row">
                     <div class="col-sm">
                     <p>S5A: <span class="S5A"></span><button type="button" class="cb btn-success sil5complete" id="S5A">&#10004;</button></p>
@@ -150,6 +192,26 @@
                     <!-- <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
                         <button type="button" class="btn btn-danger sil14sub">-</button></div> -->
                     <h2>TOTAL: <span class="sil14">0</span></h2>
+=======
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="sil5">0</span></p>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil5add">+</button>
+                        <button type="button" class="btn btn-danger sil5sub">-</button></div>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 8</h2>
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="sil8">0</span></p>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil8add">+</button>
+                        <button type="button" class="btn btn-danger sil8sub">-</button></div>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 14</h2>
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="sil14">0</span></p>
+                    <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
+                        <button type="button" class="btn btn-danger sil14sub">-</button></div>
+>>>>>>> f1ab90c02fe357fbd8db5d40a3f4e1a83ac82e66
                   </div>
             </div>
         
@@ -157,6 +219,7 @@
             <div class="row tad border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>TAD 03</h2>
+<<<<<<< HEAD
                     <div class="row">
                         <div class="col-sm">
                         <p>T03A: <span class="T03A"></span></p>
@@ -232,6 +295,26 @@
                     <!-- <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
                         <button type="button" class="btn btn-danger tad8sub">-</button></div> -->
                     <h2>TOTAL: <span class="tad9">0</span></h2>
+=======
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="tad3">0</span></p>
+                    <div class="text-center"><button type="button" class="btn btn-primary tad3add">+</button>
+                        <button type="button" class="btn btn-danger tad3sub">-</button></div>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 05</h2>
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="tad5">0</span></p>    
+                    <div class="text-center"><button type="button" class="btn btn-primary tad5add">+</button>
+                        <button type="button" class="btn btn-danger tad5sub">-</button></div>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 08</h2>
+                    <h4>Today: <input type="text" class="td"></h4>
+                    <p class="invnum text-center"><span class="tad8">0</span></p>
+                    <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
+                        <button type="button" class="btn btn-danger tad8sub">-</button></div>
+>>>>>>> f1ab90c02fe357fbd8db5d40a3f4e1a83ac82e66
                   </div>
             </div>
         </div>
