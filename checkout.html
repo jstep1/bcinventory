@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bluechew Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    
+</head>
+<body>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                    <h1>Bluechew Inventory Manager</h1>
+                    </div>
+                    <div class="col-sm-4"><a href="index.html">Inventory</a> | <a href="checkin.html">Store Bin</a> | <a href="checkout.html">Complete Bin</a></div>
+                    </div>
+                <br>
+            </div>
+            <div class="container">
+                <div class="row text-center container">
+                    <div class="col-sm-4">
+                    </div>
+
+                <div class="col-sm-4">
+                        <form action="checkin.html" id="checkout" method="get">
+                            Store Bin:
+                            <input type="text" name="input" class="checkout" autofocus>
+                        </form>
+                        <br>
+                    </div>
+
+                    <div class="col-sm-4"></div>
+                </div>
+                </div>
+        <br>
+
+              
+              <!-- Modal -->
+              <div class="modal fade" id="checkoutbin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Complete <span id="binid"></span></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center"><span id="binid"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+     <!-- End Modals -->
+    
+        </div>
+
+
+
+        <br>
+            <div class="container">
+            <div class="row sil border border-dark">
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 5</h2>
+                    <h2>TOTAL: <span class="sil5">0</span></h2>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 8</h2>
+                    <h2>TOTAL: <span class="sil8">0</span></h2>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>SIL 14</h2>
+                    <h2>TOTAL: <span class="sil14">0</span></h2>
+                  </div>
+            </div>
+        
+       
+            <div class="row tad border border-dark">
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 03</h2>
+                    <h2>TOTAL: <span class="tad3">0</span></h2>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 05</h2>
+                    <h2>TOTAL: <span class="tad5">0</span></h2>
+                  </div>
+                  <div class="col-sm border border-dark">
+                    <h2>TAD 09</h2>
+                    <h2>TOTAL: <span class="tad9">0</span></h2>
+                  </div>
+            </div>
+        </div>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
