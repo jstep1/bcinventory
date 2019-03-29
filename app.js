@@ -19,7 +19,9 @@ var config = {
 
     var invtotals = [];
 
-    var binquan = 0;
+    var inusebins = [];
+
+    var emptybins = [];
 
     var sil14total = 0;
     var sil5total = 0;
@@ -34,7 +36,12 @@ var config = {
                     xyz.forEach(function (abc) {
                         var idnum = "#" + abc.val().id;
                         $(idnum).text(abc.val().qty)
-                    
+                        if(abc.val().qty > 0) {
+                            inusebins.push(abc.key)
+                        }
+                        else {
+                            emptybins.push(abc.key)
+                        }
                         })})}).then(function() {
                             for(i=0; i<14; i++) {
                                 sil14total += parseInt($("#i" + i).text());
@@ -60,46 +67,32 @@ var config = {
                                 tad9total += parseInt($("#i" + i).text());
                                 $(".tad9").text(tad9total)
                             }
+
+                            // Bin Status
+
+                            for(i=0; i < emptybins.length; i++) {
+                                $(".E" + emptybins[i].slice(0,-1)).append(emptybins[i] + " ")
+                            }
+
+                            for(i=0; i < inusebins.length; i++) {
+                                $(".I" + inusebins[i].slice(0,-1)).append(inusebins[i] + " ")
+
+                            }
+
                         })
-
-
-
-
-$(".scan").change(function() {
-    var s5 = parseInt(localStorage.getItem("sil5"));
-    var s8 = parseInt(localStorage.getItem("sil8"));
-    var s14 = parseInt(localStorage.getItem("sil14"));
-    var t3 = parseInt(localStorage.getItem("tad3"));
-    var t5 = parseInt(localStorage.getItem("tad5"));
-    var t9 = parseInt(localStorage.getItem("tad9"));
-
-    var x = $(".scan").val();
-    
-    if (x.includes("S5")) {
-        localStorage.setItem("sil5", S5total)
-    }
-    if (x.includes("S8")) {
-        localStorage.setItem("sil8", S8total)
-    }
-    if (x.includes("S14")) {
-        localStorage.setItem("sil14", S14total)
-    }
-    if (x.includes("T03")) {
-        var t = parseInt(localStorage.getItem(x));
-        localStorage.setItem(x, T03total + t)
-    }
-    if (x.includes("T05")) {
-        var t = parseInt(localStorage.getItem(x));
-        localStorage.setItem(x, T05total + t)
-    }
-    if (x.includes("T09")) {
-        var t = parseInt(localStorage.getItem(x));
-        localStorage.setItem(x, T09total + t)
-    }
-})
+        
 
 $(".invup").click(function () {
-    alert("Inventory Updated Successfully!");
+    var binupdate = $("." + this.value + "up").val();
+    var bindd = $("#" + this.value + "dd").val();
+    if(binupdate < 0 || binupdate === "") {
+        alert("Please enter a valid quantity.")
+    }
+    else {
+        database.ref("/bins/" + this.value + "/" + bindd).update({qty : binupdate, updated: Math.round(new Date().getTime() / 1000)});
+        alert("Inventory Updated Successfully!");
+        location.reload();
+    }
 })
 
 $(".sil5complete").click(function() {
@@ -133,12 +126,13 @@ $("#reminv").click(function() {
     
 })
 
-// Check in bin functions
+// Bin functions
 
 $('#checkin').submit(function () {
     event.preventDefault();
     var binid = $(".checkin").val()
     $('.binid').text(binid)
+    $('#binid').text(binid)
     $('#checkinbin').modal('show');
  });
 
@@ -146,17 +140,37 @@ $('#checkin').submit(function () {
     event.preventDefault();
     var binid = $(".checkout").val()
     $('.binid').text(binid)
+    $('#binid').text(binid)
     $('#checkoutbin').modal('show');
  });
     
  $("#qtysubmit").click(function() {
-     console.log(database.ref("/bins"))
+    var cbin = $("#binid").text();
+    var bintype = $("#binid").text().slice(0,-1);
      var bnumber = $("#binqty").val();
-     if(bnumber > 0) {
-        alert("Added " + bnumber + " pouches.")
-     }
+     if(inusebins.includes(cbin)) {
+        alert("This bin is already in use.")
+    }
+    else {
+    database.ref("/bins/" + bintype + "/" + cbin).update({qty : bnumber, updated: Math.round(new Date().getTime() / 1000)})
+    alert("Successfully added " + bnumber + " pouches to " + cbin);
+    }
+    location.reload();
+
      
- })  
+ })
+ 
+ $("#emptybin").click(function() {
+     var cbin = $("#binid").text();
+     var bintype = $("#binid").text().slice(0,-1);
+     if(emptybins.includes(cbin)) {
+         alert("This bin is already empty.")
+     }
+     else {
+     database.ref("/bins/" + bintype + "/" + cbin).update({qty : 0, updated: Math.round(new Date().getTime() / 1000)})
+     }
+     location.reload();
+ })
 
 
 // function timeSince(date) {

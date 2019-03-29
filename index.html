@@ -16,33 +16,29 @@
                     <div class="col-sm-8">
                     <h1>Bluechew Inventory Manager</h1>
                     </div>
-                    <div class="col-sm-4"><a href="index.html">Inventory</a> | <a href="checkin.html">Store Bin</a> | <a href="checkout.html">Complete Bin</a></div>
+                    <div class="col-sm-4 text-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addinv">
+                            Update Inventory Manually
+                        </button>
+                    </div>
                     </div>
                 <br>
             </div>
-            <div class="container">
-                <div class="row text-center container">
-                    <div class="col-sm-2"></div>
+            
+                <div class="container">
+                     
 
                         <!-- <form action="index.html" method="get">
                             Scan a bin:
                             <input type="text" name="input" class="scan" autofocus>
                         </form>
                         <br> -->
-                        <div class="col-sm-8">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addinv" style="width: 40%">
-                            Add Inventory Manually
-                        </button>
-                        <br><br>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#subinv" style="width: 40%">
-                            Remove Inventory
-                    </button>
+                        <div class="text-center">
+                        <a class="btn btn-success" href="checkin.html">Store Bin</a>   <a class="btn btn-danger" href="checkout.html">Complete Bin</a>
                 </div>
-
-                <div class="col-sm-2"></div>
          
                 </div>
-                </div>
+                
         <br>
 
 
@@ -60,7 +56,7 @@
                     <div class="modal-body">
                             <form action="/">
                                 <div class="row">
-                                        <div class="col-sm-4"><select>
+                                        <div class="col-sm-4"><select id="S5dd">
                                             <option value="S5A">S5A</option>
                                             <option value="S5B">S5B</option>
                                             <option value="S5C">S5C</option>
@@ -76,11 +72,11 @@
                                             <option value="S5M">S5M</option>
                                             <option value="S5N">S5N</option>
                                           </select>
-                                          <input type="text" name="input" class="inv sil5up">
+                                          <input type="text" name="input" class="inv S5up">
                                           <br>
-                                          <button type="button" class="btn btn-success s5up invup">Add Inventory</button>
+                                          <button type="button" class="btn btn-success invup" value="S5">Add Inventory</button>
                                         </div>
-                                        <div class="col-sm-4"><select>
+                                        <div class="col-sm-4"><select id="S8dd">
                                             <option value="S8A">S8A</option>
                                             <option value="S8B">S8B</option>
                                             <option value="S8C">S8C</option>
@@ -96,11 +92,11 @@
                                             <option value="S8M">S8M</option>
                                             <option value="S8N">S8N</option>
                                           </select>
-                                          <input type="text" name="input" class="inv sil8up">
+                                          <input type="text" name="input" class="inv S8up">
                                           <br>
-                                          <button type="button" class="btn btn-success s8up invup">Add Inventory</button>
+                                          <button type="button" class="btn btn-success invup" value="S8">Add Inventory</button>
                                         </div>
-                                        <div class="col-sm-4"><select>
+                                        <div class="col-sm-4"><select id="S14dd">
                                             <option value="S14A">S14A</option>
                                             <option value="S14B">S14B</option>
                                             <option value="S14C">S14C</option>
@@ -116,14 +112,14 @@
                                             <option value="S14M">S14M</option>
                                             <option value="S14N">S14N</option>
                                           </select>
-                                          <input type="text" name="input" class="inv si14up">
+                                          <input type="text" name="input" class="inv S14up">
                                           <br>
-                                          <button type="button" class="btn btn-success s14up invup">Add Inventory</button>
+                                          <button type="button" class="btn btn-success invup" value="S14">Add Inventory</button>
                                         </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-sm-4"><select>
+                                    <div class="col-sm-4"><select id="T03dd">
                                         <option value="T03A">T03A</option>
                                         <option value="T03B">T03B</option>
                                         <option value="T03C">T03C</option>
@@ -139,11 +135,11 @@
                                         <option value="T03M">T03M</option>
                                         <option value="T03N">T03N</option>
                                       </select>
-                                      <input type="text" name="input" class="inv tad3up">
+                                      <input type="text" name="input" class="inv T03up">
                                       <br>
-                                      <button type="button" class="btn btn-success tad3up invup">Add Inventory</button>
+                                      <button type="button" class="btn btn-success invup" value="T03">Add Inventory</button>
                                     </div>
-                                    <div class="col-sm-4"><select>
+                                    <div class="col-sm-4"><select id="T05dd">
                                         <option value="T05A">T05A</option>
                                         <option value="T05B">T05B</option>
                                         <option value="T05C">T05C</option>
@@ -159,11 +155,11 @@
                                         <option value="T05M">T05M</option>
                                         <option value="T05N">T05N</option>
                                       </select>
-                                      <input type="text" name="input" class="inv tad5up">
+                                      <input type="text" name="input" class="inv T05up">
                                       <br>
-                                      <button type="button" class="btn btn-success tad5up invup">Add Inventory</button>
+                                      <button type="button" class="btn btn-success invup" value="T05">Add Inventory</button>
                                     </div>
-                                    <div class="col-sm-4"><select>
+                                    <div class="col-sm-4"><select id="T09dd">
                                         <option value="T09A">T09A</option>
                                         <option value="T09B">T09B</option>
                                         <option value="T09C">T09C</option>
@@ -179,9 +175,9 @@
                                         <option value="T09M">T09M</option>
                                         <option value="T09N">T09N</option>
                                       </select>
-                                      <input type="text" name="input" class="inv tad9up">
+                                      <input type="text" name="input" class="inv T09up">
                                       <br>
-                                      <button type="button" class="btn btn-success tad9up invup">Add Inventory</button>
+                                      <button type="button" class="btn btn-success invup" value="T09">Add Inventory</button>
                                     </div>
                                 </div>
                             </form>
@@ -241,6 +237,7 @@
             <div class="row sil border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>SIL 5</h2>
+                    <hr style="border-color: white">
                     <div class="row">
                     <div class="col-sm">
                     <p>S5A: <span class="S5A" id="i14"></span></p>
@@ -261,12 +258,12 @@
                     <p>S5N: <span class="S5N" id="i27"></span></p>
                     </div>
                     </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil5add">+</button> -->
-                        <!-- <button type="button" class="btn btn-danger sil5sub">-</button></div> -->
+                    <hr style="border-color: white">
                     <h2>TOTAL: <span class="sil5">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 8</h2>
+                    <hr style="border-color: white">
                     <div class="row">
                         <div class="col-sm">
                         <p>S8A: <span class="S8A" id="i28"></span></p>
@@ -287,12 +284,12 @@
                         <p>S8N: <span class="S8N" id="i41"></span></p>
                         </div>
                         </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil8add">+</button>
-                        <button type="button" class="btn btn-danger sil8sub">-</button></div> -->
+                        <hr style="border-color: white">
                     <h2>TOTAL: <span class="sil8">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 14</h2>
+                    <hr style="border-color: white">
                     <div class="row">
                         <div class="col-sm">
                         <p>S14A: <span class="S14A" id="i0"></span></p>
@@ -313,8 +310,7 @@
                         <p>S14N: <span class="S14N" id="i13"></span></p>
                         </div>
                         </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary sil14add">+</button>
-                        <button type="button" class="btn btn-danger sil14sub">-</button></div> -->
+                        <hr style="border-color: white">
                     <h2>TOTAL: <span class="sil14">0</span></h2>
                   </div>
             </div>
@@ -323,6 +319,7 @@
             <div class="row tad border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>TAD 03</h2>
+                    <hr>
                     <div class="row">
                         <div class="col-sm">
                         <p>T03A: <span class="T03A" id="i42"></span></p>
@@ -343,12 +340,12 @@
                         <p>T03N: <span class="T03N" id="i55"></span></p>
                         </div>
                         </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad3add">+</button>
-                        <button type="button" class="btn btn-danger tad3sub">-</button></div> -->
+                        <hr>
                     <h2>TOTAL: <span class="tad3">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>TAD 05</h2>
+                    <hr>
                     <div class="row">
                         <div class="col-sm">
                         <p>T05A: <span class="T05A" id="i56"></span></p>
@@ -369,12 +366,12 @@
                         <p>T05N: <span class="T05N" id="i69"></span></p>
                         </div>
                         </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad5add">+</button>
-                        <button type="button" class="btn btn-danger tad5sub">-</button></div> -->
+                        <hr>
                     <h2>TOTAL: <span class="tad5">0</span></h2>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>TAD 09</h2>
+                    <hr>
                     <div class="row">
                         <div class="col-sm">
                         <p>T09A: <span class="T09A" id="i70"></span></p>
@@ -395,8 +392,7 @@
                         <p>T09N: <span class="T09N" id="i83"></span></p>
                         </div>
                         </div>
-                    <!-- <div class="text-center"><button type="button" class="btn btn-primary tad8add">+</button>
-                        <button type="button" class="btn btn-danger tad8sub">-</button></div> -->
+                        <hr>
                     <h2>TOTAL: <span class="tad9">0</span></h2>
                   </div>
             </div>

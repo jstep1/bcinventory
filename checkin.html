@@ -13,10 +13,12 @@
 <body>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                     <h1>Bluechew Inventory Manager</h1>
                     </div>
-                    <div class="col-sm-4"><a href="index.html">Inventory</a> | <a href="checkin.html">Store Bin</a> | <a href="checkout.html">Complete Bin</a></div>
+                    <div class="col-sm-6">
+                            <a class="btn btn-warning" href="index.html">Inventory</a>   <a class="btn btn-success" href="checkin.html">Store Bin</a>   <a class="btn btn-danger" href="checkout.html">Complete Bin</a>
+                    </div>
                     </div>
                 <br>
             </div>
@@ -44,7 +46,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Check In <span class="binid"></span></h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Check In <span id="binid"></span></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -70,15 +72,18 @@
             <div class="row sil border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>SIL 5</h2>
-                    <h2>TOTAL: <span class="sil5">0</span></h2>
+                    <hr style="border-color: white">
+                    <p><u>IN USE:</u> <br><span class="IS5"></span></p>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 8</h2>
-                    <h2>TOTAL: <span class="sil8">0</span></h2>
+                    <hr style="border-color: white">
+                    <p><u>IN USE:</u> <br><span class="IS8"></span></p>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>SIL 14</h2>
-                    <h2>TOTAL: <span class="sil14">0</span></h2>
+                    <hr style="border-color: white">
+                    <p><u>IN USE:</u> <br><span class="IS14"></span></p>
                   </div>
             </div>
         
@@ -86,15 +91,18 @@
             <div class="row tad border border-dark">
                   <div class="col-sm border border-dark">
                     <h2>TAD 03</h2>
-                    <h2>TOTAL: <span class="tad3">0</span></h2>
+                    <hr>
+                    <p><u>IN USE:</u> <br><span class="IT03"></span></p>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>TAD 05</h2>
-                    <h2>TOTAL: <span class="tad5">0</span></h2>
+                    <hr>
+                    <p><u>IN USE:</u> <br><span class="IT05"></span></p>
                   </div>
                   <div class="col-sm border border-dark">
                     <h2>TAD 09</h2>
-                    <h2>TOTAL: <span class="tad9">0</span></h2>
+                    <hr>
+                    <p><u>IN USE:</u> <br><span class="IT09"></span></p>
                   </div>
             </div>
         </div>
