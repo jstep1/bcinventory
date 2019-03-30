@@ -17,8 +17,6 @@ var config = {
 
     var allbins = [];
 
-    var invtotals = [];
-
     var inusebins = [];
 
     var emptybins = [];
@@ -29,6 +27,8 @@ var config = {
     var tad3total = 0;
     var tad5total = 0;
     var tad9total = 0;
+
+    var s14entry;
  
     database.ref("/bins").once("value", function(bnum) {
             allbins.push(bnum.val())}).then(function(invnums) {
@@ -38,6 +38,7 @@ var config = {
                         $(idnum).text(abc.val().qty)
                         if(abc.val().qty > 0) {
                             inusebins.push(abc.key)
+                            console.log(abc.val().updated)
                         }
                         else {
                             emptybins.push(abc.key)
@@ -95,36 +96,7 @@ $(".invup").click(function () {
     }
 })
 
-$(".sil5complete").click(function() {
-    var snew = localStorage.getItem(this.id);
-    localStorage.setItem(this.id, 0);
-    localStorage.setItem("sil5", S5total - snew);
-    
-})
 
-var a;
-
-$(".sku").click(function() {
-    $("#sel").text(this.text);
-    a = $("#sel").text()
-    console.log(a)
-    $("#option").text(localStorage.getItem(a))
-})
-    
-$("#reminv").click(function() {
-    var y = $("#rem").val();
-    var z = $("#option").text();
-    console.log(y, z)
-    if(y !== "" && z !== "") {
-    var b = localStorage.getItem(a) - parseInt($("#rem").val());
-    $("." + a).text(b);
-    localStorage.setItem(a, b)
-    }
-    else {
-        alert("Please enter a valid number.")
-    }
-    
-})
 
 // Bin functions
 
@@ -156,7 +128,6 @@ $('#checkin').submit(function () {
     alert("Successfully added " + bnumber + " pouches to " + cbin);
     }
     location.reload();
-
      
  })
  
